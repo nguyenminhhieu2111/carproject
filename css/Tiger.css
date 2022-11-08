@@ -1,0 +1,1150 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@font-face {
+    font-family: 'Audi Type Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Audi Type Normal'), url('/css/AudiType-Normal_03.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Audi Type Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Audi Type Bold'), url('/css/AudiType-Bold_03.woff') format('woff');
+    }
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+#H_menu{
+    height: 75px;
+    background-color: #fff;
+}
+.H_content{
+    background-color: black;
+    height: 800px;
+}
+.container{
+    height: 100vh;
+    overflow: hidden;
+}
+.H_menu1{
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    overflow: hidden;
+  position: relative;
+}
+.H_menu1 img{
+    width: 70px;
+    height: 70px;
+}
+.H_menu1a{
+    width: 40%;
+    display: flex;
+    justify-content:space-between;
+    margin-left: 100px;
+}
+.H_menu1a a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(150, 141, 141);
+    font-family:  sans-serif;
+    position: relative;
+    top: 30px;
+}
+.H_menu1a a:hover{
+    color: black;
+}
+.H_searchBox{
+    display: inline-flex;
+    position: absolute;
+    right: 15px;
+    top:25px;
+}
+.gg-search {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 17px;
+    height: 17px;
+    border: 1.6px solid;
+    border-radius: 100%;
+    margin-left: 2px;
+    margin-top: -4px;
+    cursor: pointer;
+}
+.gg-search::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 1.5px;
+    height: 15px;
+    background: currentColor;
+    transform: rotate(-45deg);
+    top: 11px;
+    left: 15px;
+}
+input[type="text"]{
+    border: none;
+    width: 100%;
+    outline: none;
+}
+.inputBox{
+    position: relative;
+    width: 0;
+    transition: 0.5s;
+    border-bottom: 1px solid;
+}
+.H_searchBox:hover > .inputBox{
+    width: 250px;
+}
+.H_content{
+    height: calc(100vh - 75px);
+    overflow: hidden;
+}
+.H_content img{
+    width: 100%;
+    position: relative;
+    top: -700px;
+}
+
+.H_ModalMenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+.form_H_Modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+.H_ResForm{
+    position: relative;
+    top: 20px;
+    margin: 0px auto;
+    background-color: #fff;
+    height: 720px;
+    width: 620px;
+}
+.contentForm img{
+position: relative;
+left: 10px;
+width: 50px;
+}
+.contentForm p{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    top: 15px;
+    right: 200px;
+    margin: 0px auto;
+    position: absolute;
+}
+.contentForm{
+    height: 50px;
+    background-color: black;
+    position: relative;
+}
+.iconmodal1 {
+    background-color:rgba(231, 23, 23, 0.6);;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  position: relative;
+  box-shadow: 0 3px 20px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  -moz-transition:transform 0.5s;
+  -o-transition:transform 0.5s;
+  -webkit-transition:transform 0.5s;
+  transition:transform 0.5s;
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  cursor: pointer;
+  transform-origin: top right;
+  left: 200px;
+
+}
+.openclosemodal1{
+   top: 0;
+   left: 370px;;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+    
+}
+.iconmodal1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: grey;
+    width: 70%;
+    height: 5%;
+    left: 13%;
+    top: 47%;
+    transform: rotateZ(45deg);
+    transition: transform 0.3s ease;
+}
+.iconmodal1:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: grey;
+    width: 5%;
+    height: 70%;
+    left: 47%;
+    top: 13%;
+    transform: rotateZ(45deg);
+    transition: transform 0.3s ease;
+}
+  .openclosemodal1:hover .iconmodal1:after{
+    
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .openclosemodal1:hover .iconmodal1:before {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+.iconmodal {
+    background-color:rgba(255,255,255,.6);;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  position: relative;
+  box-shadow: 0 3px 20px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+  -moz-transition:transform 0.5s;
+  -o-transition:transform 0.5s;
+  -webkit-transition:transform 0.5s;
+  transition:transform 0.5s;
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  cursor: pointer;
+  transform-origin: top right;
+
+}
+.openclosemodal{
+   top: 0;
+   left: 370px;;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+    
+}
+.iconmodal:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: grey;
+    width: 70%;
+    height: 5%;
+    left: 13%;
+    top: 47%;
+    transform: rotateZ(45deg);
+    transition: transform 0.3s ease;
+}
+.iconmodal:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: grey;
+    width: 5%;
+    height: 70%;
+    left: 47%;
+    top: 13%;
+    transform: rotateZ(45deg);
+    transition: transform 0.3s ease;
+}
+  .openclosemodal:hover .iconmodal:after{
+    
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .openclosemodal:hover .iconmodal:before {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .H_CarMenu{
+    width: 420px;
+    height: 100vh;
+    background-color: white;
+    font-family: 'Prata';
+    position: relative;
+    font-weight: 600;
+}
+  .H_CarMenu li{
+     list-style: none;
+     cursor: pointer;
+     margin-top: 70px;
+     text-decoration: none;
+    
+  }
+  .H_CarMenu a{
+      text-decoration: none;
+      color: black;
+  }
+  .H_CarMenu ul{    
+      border-bottom: 1px solid;
+  }
+  .content_H_Modal{
+      position: absolute;
+      top: 90px;
+      right: 100px;
+      left: 100px;
+      text-transform: uppercase;
+  }
+  .H_CarMenu li:hover {
+   color:brown;
+}
+span{
+    font-size: 21px;
+}
+select{
+    border: none;
+    border-bottom: 1px solid;
+    width: 300px;
+}
+
+.ContentRes{
+    padding-top: 70px;
+    width: 80%;
+    height: 20%;
+    margin: 0px auto;
+}
+.pick_H{
+    margin-top: 30px;
+}
+.ContentRes input[type="text"]{
+    margin-top: 40px;
+    border-bottom: 1px solid;
+    width: 400px;
+}
+.ContentRes input[type="email"]{
+    border: none;
+    margin-top: 40px;
+    border-bottom: 1px solid;
+    width: 400px;
+}
+.ContentRes input#phone{
+    border: none;
+    border-bottom: 1px solid;
+    width: 400px;
+    margin-top: 40px;
+}
+.ContentRes button {
+    top: 80px;
+    left: 200px;
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+  }
+  
+.ContentRes button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translate3d(50%, 50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+  }
+  
+.ContentRes button:hover {
+    cursor: pointer;
+    color: #161616;
+  }
+  
+.ContentRes button:hover::before {
+    transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+  }
+.mc_imgHeader img{
+    width: 100%;
+}
+.mc_imgHeader p{
+    top: 120px;
+    left: 80px;
+    position: absolute;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family:'Audi Type Normal';
+}
+.contentHeaderA{
+    margin-top: 30px;
+}
+.contentHeaderA h2{
+    text-align: center;
+    font-family:'Audi Type Normal';
+    font-size: 55px;
+   line-height: 55px;
+}
+.contentHeaderB {
+    width: 60%;
+    margin: 0px auto;
+    margin-top: 30px;
+    overflow: hidden;
+ 
+}
+.contentHeaderB p{
+    font-weight: 300;
+    font-family: 'Audi Type Normal';
+    color: #363333;
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+}
+.selectService{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: 0px auto;
+    margin-top: 70px;
+}
+.selectService img{
+    width: 50px;
+    cursor: pointer;
+}
+.selectService .H_service img:hover{
+    opacity: 0.5;
+}
+.H_service h1{
+    font-weight: 300;
+    font-size: 20px;
+}
+.H_service{
+    width: 100px;
+    text-align: center;
+}
+.slide_H_Car{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 80px;  
+}
+.slide_H_Car .slidder{
+    width: 1000px;
+    height: 550px;
+    overflow: hidden;
+}
+.slide_H_Car .slider-menu{
+    width: 700%;
+    height: 550px;
+    display: flex;
+}
+.slide_H_Car .slider-menu input{
+    display: none;
+}
+.slide_H_Car .slide{
+    width: calc(100% / 7);
+    transition: 1s; 
+
+}
+.slide_H_Car .slide img{
+    width: 1000px;
+    height: 550px;
+    
+}
+.navigation-start{
+    position: absolute;
+    width: 1000px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.manual-btn{
+    width: calc((1000px / 6) - 10px);
+}
+.manual-btn img{
+    width: calc((1000px / 6) - 8px);
+    cursor: pointer;
+}
+.manual-btn img:hover{
+    filter: grayscale(100%);
+  
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: calc(-100% / 7);
+}
+#radio3:checked ~ .first{
+    margin-left: calc((-100% / 7) * 2 );
+}
+#radio4:checked ~ .first{
+    margin-left: calc((-100% / 7) * 3 );
+}
+#radio5:checked ~ .first{
+    margin-left: calc((-100% / 7) * 4 );
+}
+#radio6:checked ~ .first{
+    margin-left: calc((-100% / 7) * 5 );
+}
+.body_contentA{
+    width: 60%;
+    margin-top: 250px;
+    margin-left: 17%;
+}
+.body_contentA h1{
+    font-size: 35px;
+    font-family: 'Audi Type Normal';
+    
+}
+.body_contentA h2{
+    font-family: 'Audi Type Normal';
+    font-size: 18px;
+    font-weight: 100;
+    margin-top: 20px;
+    color: #3a3636;
+}
+
+.H_Selectimage{
+    margin-top: 50px;
+    height: 740px;
+    overflow: hidden;
+    position: relative;
+   
+}
+.H_Selectimage img{
+    width: 100%;
+}
+.H_changeImage{
+    width: 20%;
+    display: flex;
+    margin: 20px auto;
+    text-align: center;
+    justify-content: space-around;
+}
+.H_changeImage h1,.H_changeImage h2{
+    font-size: 20px;
+    font-family: 'Audi Type Normal';
+    font-weight: 300;
+    color: gray;
+    cursor: pointer;
+}
+.H_changeImage h1{
+    color: black;
+    border-bottom: 2px solid;
+}
+.green_H_car{
+    position: absolute;
+    right: 0;
+    top:0;
+    display: none;
+      
+}
+.body_contentB{    
+    margin-top: 120px;
+    font-family: 'Audi Type Normal';
+}
+.body_contentB h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Audi Type Bold';
+}
+.body_contentB .thongSo{
+     display: flex;
+}
+.body_contentB .thong_Ke{
+    margin: 0px auto;
+    line-height: 50px;
+    
+}
+.body_contentB .H_thongKe{
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-around;
+}
+.body_contentB .thong_Ke h2{
+    font-size: 60px;
+}
+.body_contentB .thong_Ke h6{
+    font-weight: 200;
+}
+.body_contentB .thong_Ke h3{
+    font-weight: 100;
+}
+.body_contentC{
+
+}
+.H_contentC{
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 120px;
+}
+.body_contentC h1{
+    font-size: 45px;
+    font-family: 'Audi Type Bold';
+}
+.body_contentC h3{
+    font-family: 'Audi Type Normal';
+    font-weight: 100;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.contenimageC img{
+    width: 100%;
+    margin-top: 40px;
+}
+.H_contentD{
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 120px;
+}
+.body_contentD h1{
+    font-size: 45px;
+    font-family: 'Audi Type Bold';
+}
+.body_contentD h3{
+    font-family: 'Audi Type Normal';
+    font-weight: 100;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.contenimageD {
+    margin: 0px auto;
+    width: 70%;
+    margin-top: 40px;
+}
+
+.H_contentE{
+    width: 40%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 120px;
+}
+.body_contentE h1{
+    font-size: 45px;
+    font-family: 'Audi Type Bold';
+}
+.body_contentE h3{
+    font-family: 'Audi Type Normal';
+    font-weight: 100;
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 20px;
+}
+.contenimageE {
+    margin: 0px auto;
+    width: 70%;
+    margin-top: 40px;
+}
+.body_contentG{
+    display: flex;
+    margin-top: 100px;
+    background-color: #161616;
+}
+.body_contentG .H_contentG{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    
+}
+.body_contentG .H_contentG h1{
+    text-align: center;
+    margin-top: 200px;
+}
+.body_contentG .H_contentG h3{
+    margin-top: 30px;
+    margin-left: 32px;
+     font-size: 15px;
+     font-weight: 100;
+}
+.H_contentF{
+    width: 40%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 120px;
+}
+.body_contentF h1{
+    font-size: 45px;
+    font-family: 'Audi Type Bold';
+}
+.body_contentF h3{
+    font-family: 'Audi Type Normal';
+    font-weight: 100;
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 20px;
+}
+.contenimageF img {
+    width: 100%;
+    margin-top: 40px;
+}
+.fotterMC{
+    height: 500px;
+    background-color: black;
+    margin-top: -4px;
+    font-family: sans-serif;
+}
+
+.fotterMcL{
+    width: 85%;
+    margin: 0px auto;
+    position: relative;
+    height: 75%;
+}
+.fotterMCLa{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;  
+}
+.fotterMCLa h4{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 80px;
+    line-height: 100px;
+}
+.fotterMCLa a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+}
+.fotterMC a:hover{
+    color: gray;
+}
+.iconbacktop{
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    cursor: pointer;
+}
+.iconbacktop a{
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+}
+.fotter_mangXaHoi{
+    color: white;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    font-size: 28px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    bottom: 20px;
+}
+.fotter_mangXaHoi i:hover{
+    opacity: 0.7;
+}
+.fotterMclare{
+   width:85% ;
+   height: 25%;
+   border-top: 1px solid white;
+   color: white;
+   display: flex;
+   margin: 0px auto;
+
+}
+.fotterMclare a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+.fotterMclare span{
+    font-size: 12px;
+    font-weight: 300;
+}
+.H_giayPhep{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;   
+}
+.lastfotter_H{
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+.lastfotter_H a{
+    text-decoration: none;
+    color: black;
+}
+.lastfotter_H img{
+    width: 40px;
+}
+.lastfotter_H span{
+    font-size: 12px;
+}
+.box_last_H{
+     width: 250px;
+     margin: 0px auto;
+     text-align: center;
+     font-family: sans-serif;
+     margin-top: 5px;
+}
+.box_last_H:hover{
+    opacity: 0.6;
+}
+.slideIndex_H .slidder_H{
+    width: 1536px;
+    height: calc(100vh - 75px);
+    overflow: hidden;
+}
+.slideIndex_H .slider-menu_H{
+width: 500%;
+height: calc(100vh - 75px);
+display: flex;
+  
+}
+.slideIndex_H .slider-menu_H input{
+    display: none;
+}
+.slideIndex_H .slide_H{
+    width: 20%;
+    transition:  0.5s; 
+    position: relative;
+}
+.slideIndex_H .slide_H img{
+    width: 1536px;
+    height: calc(100vh - 75px);
+    
+    
+}
+label.manual-btn_H{
+    border:2px solid #EC700F ;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: 1s;
+}
+.navigation-start_H{
+    position: absolute;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    bottom: 60px;
+
+}
+.manual-btn_H:not(:last-child){
+    margin-right: 15px;
+}
+.manual-btn_H:hover{
+    background: #EC700F ;
+}
+#radio1_H:checked ~ .first_H{
+    margin-left: 0;
+}
+#radio2_H:checked ~ .first_H{
+    margin-left: -20%;
+}
+#radio3_H:checked ~ .first_H{
+    margin-left: -40%;
+}
+#radio4_H:checked ~ .first_H{
+    margin-left: -60%;
+}
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 605px;
+    right: 20px;
+}
+.navigation-auto .aqua{
+    border:2px solid #EC700F ;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: 1s;
+}
+.navigation-auto .aqua:not(:last-child){
+    margin-right: 15px;
+}
+#radio1_H:checked ~ .navigation-auto .auto-btn1{
+background: #EC700F ;
+}
+#radio2_H:checked ~ .navigation-auto .auto-btn2{
+    background: #EC700F ;
+    }
+    #radio3_H:checked ~ .navigation-auto .auto-btn3{
+        background: #EC700F ;
+        }
+        #radio4_H:checked ~ .navigation-auto .auto-btn4{
+            background: #EC700F ;
+            }
+         
+.H_content1{
+    position: relative;
+    top: -100px;
+    left: 35px;
+}
+.H_content1 button{
+    width: 188px;
+    height: 58px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.H_content1 .H_ButtonContent{
+    background-color: #0066FF;
+    color: #fff;
+    border: 1px solid;
+}
+.H_content0,.H_content2,.H_content3,.H_content4{
+    position: relative;
+    top: -700px;
+    left: 35px;
+}
+.H_content0 h1 ,.H_content2 h1,.H_content3 h1,.H_content4 h1{
+    font-weight: 900;
+    color: #fff;
+    font-size: 45px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.H_content0 h2,.H_content2 h2,.H_content3 h2,.H_content4 h2{
+    margin-top: 15px;
+    font-size: 30px;
+}
+.H_content2 h2 ,.H_content3 h2{
+    text-transform: uppercase;
+    color: rgb(158, 147, 147);
+}
+.H_content3 h2{
+    color: rgb(206, 121, 51);
+    font-family: sans-serif;
+    margin-top: 30px;
+}
+
+.selectService a{
+    text-decoration: none;
+    color: black;
+} 
+
+/*sua chua*/
+.repain_header{
+    text-align: center;
+}
+
+.repainX{
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    margin: 0px auto;
+    box-shadow: 0 0 0 5px hsl(0deg 0% 100% / 15%);
+    
+}
+.repainX h1{
+    font-family:sans-serif ;
+    font-size: 20px;
+    
+}
+.repain_header {
+    position: relative;
+}
+.repair_body{
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.repain_content h1{
+    font-size: 22px;
+}
+.repain_content h5{
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.repain_local{
+    justify-content: space-between;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.repain_local img{
+    width: 385px;
+    height: 215px;
+}
+.local_1{
+    width: 370px;
+}
+.local_1 h1{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.local_1 h4{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+/* local */
+.local_header {
+  margin: 0px auto;
+  width: 85%;
+}
+.local_header img{
+    width: 100%;
+}
+.seeMap{
+    display: flex;
+    height: 20px;
+    cursor: pointer;
+}
+.seeMap:hover{
+    color: rgb(194, 31, 31);
+}
+i.fas.fa-chevron-right{
+    position: relative;
+    top: 7px;
+    right: -7px;
+}
+.modal_local,.modal_local_1,.modal_local_2{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+.modal_local_img{
+    width: 1000px;
+    height: 100vh;
+    margin: 0px auto;
+    background-color: white;
+    position: relative;
+}
+.modal_local_img img{
+  position: absolute;
+  top: 70px;
+  right: 70px;
+}
+.modal_local_img .fa-times:before{
+    position: absolute;
+    right: 15px;
+    font-size: 25px;
+}
+.modal_local_img i{
+    cursor: pointer;
+}
+
+.ss_register img{
+  width: 100%;
+}
+.ss_register_body{
+ width: 50%;
+ margin: 0px auto;
+ margin-top: 30px;
+ margin-bottom: 70px;
+ 
+}
+
+.ss_register_body input,select#carSelect{
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-family: sans-serif;
+    background-color: transparent;
+    width: 100%;
+}
+form h1{
+    text-align: center;
+    font-family: 'Audi Type Bold';
+    margin-bottom: 20px;
+}
+select#carSelect{
+    margin-bottom: 10px;
+}
+input#last_name,input#phone,input#email{
+    margin-bottom: 20px;
+}
+.nabel,.nabel1,.nabelName,.nabelPhone,.nabelMail{
+    font-size: 18px;
+    font-family: 'Audi Type Normal';
+}
+button.nabelRes{
+  z-index: 1;
+  position: relative;
+  left: 270px;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.6em 7em;
+  outline: none;
+  border: none;
+  background-color: hsl(235, 5%, 54%);
+  margin-top: 20px;
+}
+button.nabelRes::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ac2229;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  button.nabelRes:hover {
+    cursor: pointer;
+  }
+  
+  button.nabelRes:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
